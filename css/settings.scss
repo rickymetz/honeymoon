@@ -1,0 +1,110 @@
+@import 'jeet/index';
+
+//Variables
+$maincolor: #52B3EA;
+$secondarycolor: scale-color( $maincolor, $saturation: -30%, $lightness: 0%, $alpha: 10%);
+$darkercolor: darken( $maincolor, 30%);
+
+$altcolor: #EA525F;
+
+
+//Extends
+%serif{
+	font-family: 'Vollkorn', serif;
+}
+
+%sansserif{
+	font-family: 'Raleway', sans-serif;
+}
+
+%textlink{
+	color: $altcolor;
+	text-decoration: none;
+    border-bottom: 1px solid $maincolor;
+    &:hover{
+    	color: $maincolor;
+		text-decoration: none;
+	    border-bottom: 1px solid $altcolor;
+    }
+    &:active{
+		position:relative;
+		top:1px;
+	}
+
+}
+
+ %button{
+ 	-moz-box-shadow:inset 0px 1px 0px 0px darken( $maincolor, 10%);
+	-webkit-box-shadow:inset 0px 1px 0px 0px darken( $maincolor, 10%);
+	box-shadow:inset 0px 1px 0px 0px darken( $maincolor, 10%);
+	background: linear-gradient(to bottom, $maincolor, darken( $maincolor, 10%) );
+	border-radius:6px;
+	text-indent:0;
+	display:inline-block;
+	font-weight:bold;
+	font-style:normal;
+	padding: 1em;
+	color: #fff;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px darken( $maincolor, 10%);
+	&:hover{
+		background: linear-gradient(to top, $maincolor, darken( $maincolor, 10%) );
+	}
+	&:active{
+		position:relative;
+		top:1px;
+	}
+ }
+
+//animation stuff
+
+/*typing animation*/
+#typed-cursor{
+  opacity: 1;
+  font-weight: 100;
+  // add prefixes
+  animation: blink 0.7s infinite;
+  -webkit-animation: blink 0.7s infinite;
+}
+
+@-webkit-keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+
+@-keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+
+/*floating animation*/
+
+.floating{
+    float: left;
+    -webkit-animation-name: Floatingx;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in;
+    -moz-animation-name: Floating;
+    -moz-animation-duration: 2s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in;
+    margin-left: 30px;
+    margin-top: 5px;
+
+}
+
+@-webkit-keyframes Floatingx{
+    from {-webkit-transform:translate(0, 0px);}
+    30% {-webkit-transform:translate(0, 5px);}
+    to {-webkit-transform: translate(0, -0px);    }    
+}
+    
+@-moz-keyframes Floating{
+    from {-moz-transform:translate(0, 0px);}
+    65% {-moz-transform:translate(0, 5px);}
+    to {-moz-transform: translate(0, -0px);}    
+}

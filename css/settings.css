@@ -1,0 +1,70 @@
+/*  Syntax Quick Reference
+  --------------------------
+  column($ratios: 1, $offset: 0, $cycle: 0, $uncycle: 0, $gutter: $jeet-gutter)
+  span($ratio: 1, $offset: 0)
+  shift($ratios: 0, $col_or_span: column, $gutter: $jeet-gutter)
+  unshift()
+  edit()
+  center($max_width: 1410px, $pad: 0)
+  stack($pad: 0, $align: false)
+  unstack()
+  align($direction: both)
+  cf()
+*/
+/*typing animation*/
+#typed-cursor {
+  opacity: 1;
+  font-weight: 100;
+  animation: blink 0.7s infinite;
+  -webkit-animation: blink 0.7s infinite; }
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+@-keyframes blink {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+/*floating animation*/
+.floating {
+  float: left;
+  -webkit-animation-name: Floatingx;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in;
+  -moz-animation-name: Floating;
+  -moz-animation-duration: 2s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: ease-in;
+  margin-left: 30px;
+  margin-top: 5px; }
+
+@-webkit-keyframes Floatingx {
+  from {
+    -webkit-transform: translate(0, 0px); }
+
+  30% {
+    -webkit-transform: translate(0, 5px); }
+
+  to {
+    -webkit-transform: translate(0, 0px); } }
+@-moz-keyframes Floating {
+  from {
+    -moz-transform: translate(0, 0px); }
+
+  65% {
+    -moz-transform: translate(0, 5px); }
+
+  to {
+    -moz-transform: translate(0, 0px); } }

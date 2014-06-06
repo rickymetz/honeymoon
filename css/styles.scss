@@ -1,1 +1,100 @@
-@import 'jeet/index';
+@import 'settings';
+
+body{
+
+}
+
+.background-image {
+	position: fixed;
+	left: 0;
+	right: 0;
+	z-index: 1;
+
+	display: block;
+	background: linear-gradient(to bottom, RGBA(224, 223, 159, .5), white), url("/images/beach.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+
+	-webkit-filter: blur(5px);
+	-moz-filter: blur(5px);
+	-o-filter: blur(5px);
+	-ms-filter: blur(5px);
+	filter: blur(5px);
+	
+	width: 110%;
+	height: 110%;
+	left: -15px;
+	right: -15px;
+	top: -15px;
+	bottom: -15px;
+	z-index:0;
+
+}
+main{
+	@include align(both);
+	width:100%;
+}
+
+main .centering{
+	@include center (75%);
+}
+
+main .centering img{
+	@include center(100%);
+	width: 20vw;
+	margin-bottom: 2em;
+}
+
+.centering h1 {
+	@extend %serif;
+	color: $secondarycolor;
+	text-align:center;
+	margin: 0;
+}
+
+.hero{
+	margin-bottom: 2em;
+}
+
+.typing{
+	display: inline;
+	color: $altcolor;
+	font-size: 1.5em;
+	margin: 0;
+
+}
+
+#typed-cursor{
+	font-size: 1.5em;
+}
+
+.signup{
+	@include center(100%);
+	& .altlink{
+		font-size: 0.75em;
+		text-align: center;
+		@include center();
+	}
+}
+
+
+.altlink{
+	color: $darkercolor;
+	@extend %sansserif;
+	& a{
+		@extend %textlink;
+	}
+}
+
+
+.button{
+		@include span(1/3 , $offset: 1/3);
+		@include center(100%);
+		text-align: center;
+		@extend %button;
+		@extend %sansserif;
+		max-width: 225px;
+		font-size: 1em;
+		margin-bottom: 1.75em;
+	}
